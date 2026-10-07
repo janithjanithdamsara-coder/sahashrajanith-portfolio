@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Sahashra Janith Portfolio</string>
+    <string name="website_url">https://sahashrajanith.site/</string>
+    <string name="local_url">http://10.0.2.2/janithme/</string>
+    <string name="error_offline">No Internet Connection. Pull down to retry.</string>
+</resources>

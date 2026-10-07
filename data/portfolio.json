@@ -1,0 +1,316 @@
+{
+    "hero": {
+        "name": "Sahashra Janith",
+        "title": "Full-Stack Web Developer & Software Engineer",
+        "tagline": "NVQ 4 CERTIFIED & DIPLOMA IN ICT (NVTI)",
+        "subtitle": "Full-Stack Web Developer & Software Engineer. I craft high-performance web systems, LMS portals, e-commerce stores, Android mobile applications, and modern web experiences.",
+        "availability": "Available for Hire",
+        "email": "sahashrajanith@gmail.com",
+        "phone": "+94 77 309 3941",
+        "location": "Galle, Sri Lanka",
+        "github": "https:\/\/github.com\/sahashrajanith",
+        "linkedin": "https:\/\/www.linkedin.com\/in\/sahashra-janith-6422353a1",
+        "whatsapp": "https:\/\/wa.me\/94773093941",
+        "resume_url": "#",
+        "stats": [
+            {
+                "num": "15+",
+                "label": "Live Web Apps"
+            },
+            {
+                "num": "NVQ 4",
+                "label": "Software Dev"
+            },
+            {
+                "num": "NVTI",
+                "label": "ICT Diploma"
+            },
+            {
+                "num": "100%",
+                "label": "Client Uptime"
+            }
+        ],
+        "about_text_1": "I am a passionate Full-Stack Web Developer & Software Engineer based in Sri Lanka. I hold an NVQ Level 4 in Software Development and a Diploma in Information & Communication Technology (ICT) from the National Vocational Training Institute (NVTI).",
+        "about_text_2": "My technical journey is centered on engineering high-performance online systems \u2014 including LMS portals, examination platforms, AL tuition management apps, e-commerce stores, and modern responsive web experiences."
+    },
+    "skills": [
+        {
+            "id": "s1",
+            "name": "PHP & Server Architecture",
+            "level": 95,
+            "category": "backend",
+            "badge": "Expert"
+        },
+        {
+            "id": "s2",
+            "name": "MySQL & Database Design",
+            "level": 92,
+            "category": "backend",
+            "badge": "Advanced"
+        },
+        {
+            "id": "s3",
+            "name": "Java (Desktop & Android)",
+            "level": 90,
+            "category": "backend",
+            "badge": "Advanced"
+        },
+        {
+            "id": "s4",
+            "name": "JavaScript (ES6+)",
+            "level": 94,
+            "category": "frontend",
+            "badge": "Expert"
+        },
+        {
+            "id": "s5",
+            "name": "HTML5 & Responsive CSS3",
+            "level": 98,
+            "category": "frontend",
+            "badge": "Master"
+        },
+        {
+            "id": "s6",
+            "name": "Glassmorphic UI Design",
+            "level": 95,
+            "category": "frontend",
+            "badge": "Expert"
+        },
+        {
+            "id": "s7",
+            "name": "Three.js & 3D WebGL",
+            "level": 88,
+            "category": "3d",
+            "badge": "Advanced"
+        },
+        {
+            "id": "s8",
+            "name": "Android App Development",
+            "level": 86,
+            "category": "tools",
+            "badge": "Advanced"
+        },
+        {
+            "id": "s9",
+            "name": "Fullstack E-Commerce Engine",
+            "level": 92,
+            "category": "backend",
+            "badge": "Expert"
+        },
+        {
+            "id": "s10",
+            "name": "Git & GitHub Repositories",
+            "level": 94,
+            "category": "tools",
+            "badge": "Expert"
+        },
+        {
+            "id": "s11",
+            "name": "NVQ 4 & ICT Diploma Stack",
+            "level": 96,
+            "category": "tools",
+            "badge": "Certified"
+        }
+    ],
+    "projects": [
+        {
+            "id": "zenith-academy",
+            "title": "Zenith Academy LMS & Exam Portal",
+            "category": "fullstack",
+            "desc": "Comprehensive educational academy platform featuring online exam management, student portals, and digital course resources.",
+            "image": "assets\/images\/Screenshot_2026-08-27_111452.png",
+            "tags": [
+                "PHP",
+                "MySQL",
+                "JavaScript",
+                "LMS",
+                "Exam Engine"
+            ],
+            "demoUrl": "https:\/\/exampro.site\/",
+            "githubUrl": "https:\/\/github.com\/sahashrajanith",
+            "longDesc": "Zenith Academy is a full-featured Learning Management & Online Examination System built to streamline tuition operations. Features timed online quizzes, student progress dashboards, automated grade calculation, and secure resource downloads."
+        },
+        {
+            "id": "scholarpro",
+            "title": "ScholarPro Academic Evaluation Portal",
+            "category": "fullstack",
+            "desc": "Advanced web platform designed for academic testing, online exams, student performance tracking, and resource distribution.",
+            "image": "assets\/images\/Screenshot_2026-08-27_111649.png",
+            "tags": [
+                "PHP",
+                "MySQL",
+                "Glassmorphic UI",
+                "Web Portal"
+            ],
+            "demoUrl": "https:\/\/scholarpro.exampro.site\/",
+            "githubUrl": "https:\/\/github.com\/sahashrajanith",
+            "longDesc": "ScholarPro empowers educational institutions with an online testing environment. Provides instant result generation, detailed subject-wise analytical reports, and interactive study modules."
+        },
+        {
+            "id": "science-portal",
+            "title": "Chaminda sumanathilaka Science Learning Portal",
+            "category": "frontend",
+            "desc": "Dedicated online science education website featuring digital lessons, interactive quiz modules, and study materials.",
+            "image": "assets\/images\/Screenshot_2026-08-27_111617.png",
+            "tags": [
+                "PHP",
+                "MySQL",
+                "HTML5\/CSS3",
+                "Educational Web"
+            ],
+            "demoUrl": "https:\/\/science.sahashrajanith.site\/",
+            "githubUrl": "https:\/\/github.com\/sahashrajanith",
+            "longDesc": "A specialized web portal tailored for science students. Includes categorized subject modules, interactive lesson quizzes, downloadable revision papers, and direct student inquiry channels."
+        },
+        {
+            "id": "bloomy-haven",
+            "title": "Bloomy Haven E-Commerce Store",
+            "category": "ecom",
+            "desc": "Full-featured online store with product catalogs, shopping cart engine, responsive product showcase, and checkout system.",
+            "image": "assets\/images\/project_3d_ecom.jpg",
+            "tags": [
+                "PHP",
+                "MySQL",
+                "E-Commerce",
+                "Cart API",
+                "Fullstack"
+            ],
+            "demoUrl": "https:\/\/bloomyhaven.store\/",
+            "githubUrl": "https:\/\/github.com\/sahashrajanith",
+            "longDesc": "Bloomy Haven is an e-commerce platform built for online shopping. Delivers fluid product filtering, dynamic cart drawer management, category browsing, and order confirmation workflows."
+        },
+        {
+            "id": "sahashra-site",
+            "title": "SAKWA CANNERIES & EXPORTS Inventory System",
+            "category": "frontend",
+            "desc": "Official web domain platform hosting live web applications, digital client services, and modern software solutions.",
+            "image": "assets\/images\/Screenshot_2026-08-27_140420.png",
+            "tags": [
+                "Web Platform",
+                "PHP",
+                "HTML5\/CSS3",
+                "JavaScript"
+            ],
+            "demoUrl": "https:\/\/sahashrajanith.site\/",
+            "githubUrl": "https:\/\/github.com\/sahashrajanith",
+            "longDesc": "SAKWA CANNERIES & EXPORTS Inventory System"
+        },
+        {
+            "id": "al-class-mgmt",
+            "title": "AL Class Management System",
+            "category": "fullstack",
+            "desc": "Student and class management web portal built for A\/L tuition institutes to handle enrollments, fees, and attendance.",
+            "image": "assets\/images\/Screenshot_2026-08-27_140246.png",
+            "tags": [
+                "PHP",
+                "MySQL",
+                "Management System",
+                "Fullstack"
+            ],
+            "demoUrl": "https:\/\/futuremindssite.site",
+            "githubUrl": "https:\/\/github.com\/AL-Class-manegement-System\/AL-Class-Management-System.git",
+            "longDesc": "Hosted online tuition class management system designed for managing student profiles, class schedules, fee payments, and attendance records efficiently."
+        },
+        {
+            "id": "future-mind-app",
+            "title": "Microfinance  Android Mobile App",
+            "category": "mobile",
+            "desc": "Microfinance  Android Mobile App",
+            "image": "assets\/images\/WhatsApp_Image_2026-08-27_at_1.58.29_PM.jpeg",
+            "tags": [
+                "Android",
+                "Java",
+                "Mobile App",
+                "XML",
+                "API"
+            ],
+            "demoUrl": "https:\/\/github.com\/sahashrajanith\/future-mind-app.git",
+            "githubUrl": "https:\/\/github.com\/sahashrajanith\/future-mind-app.git",
+            "longDesc": "Native Android mobile application built with Java enabling students and tuition administrators to access class schedules, receive real-time notifications, and track course updates on mobile devices."
+        },
+        {
+            "id": "proj_1790749103",
+            "title": "Pos  Sri lanka",
+            "category": "ecom",
+            "desc": "Smart Retail POS Software for Modern Sri Lankan Stores",
+            "longDesc": "Keep billing non-stop during power cuts and internet downtime. Manage Barcode inventory, Customer Credit (\u0dab\u0dba \u0db4\u0ddc\u0dad), and Daily Profit from any Android phone, tab, or POS machine.",
+            "image": "assets\/images\/Screenshot_2026-09-30_114516.png",
+            "tags": [
+                "PHP",
+                "MySQL",
+                "JavaScript"
+            ],
+            "demoUrl": "",
+            "githubUrl": "https:\/\/github.com\/janithjanithdamsara-coder\/myposlanka.git"
+        }
+    ],
+    "messages": [
+        {
+            "id": "msg_1787804748_364",
+            "name": "ss",
+            "email": "janithjanithdamsara@gmail.com",
+            "subject": "jhthth",
+            "message": "htht",
+            "date": "2026-08-27 06:25:48",
+            "read": false
+        },
+        {
+            "id": "msg_1787804608_292",
+            "name": "Sahashra Janith damsara",
+            "email": "janithjanithdamsara@gmail.com",
+            "subject": "ICT",
+            "message": "test 1",
+            "date": "2026-08-27 06:23:28",
+            "read": false
+        },
+        {
+            "id": "msg_sample_1",
+            "name": "Kavindu Perera",
+            "email": "kavindu.p@example.com",
+            "subject": "Inquiry regarding LMS Development",
+            "message": "Hi Sahashra, I am interested in getting a custom online exam portal built for our institute. Please get in touch with pricing details.",
+            "date": "2026-08-26 14:30:00",
+            "read": false
+        }
+    ],
+    "analytics": {
+        "total_views": 1266,
+        "today_views": 2,
+        "today_date": "2026-09-30",
+        "unique_ips": [
+            "837ec5754f503cfaaee0929fd48974e7"
+        ]
+    },
+    "experience": [
+        {
+            "id": "exp1",
+            "role": "Software Developer",
+            "company": "Mr.Link Technology",
+            "type": "Full-Time",
+            "period": "Present",
+            "status": "Active Role",
+            "desc": "Engineering web applications, enterprise software solutions, and custom backend systems. Responsible for database architecture, API integrations, responsive frontends, and client project deployment.",
+            "technologies": [
+                "PHP",
+                "MySQL",
+                "JavaScript",
+                "System Architecture"
+            ]
+        },
+        {
+            "id": "exp2",
+            "role": "Intern Web Developer",
+            "company": "Sakwa Canneries & Exports",
+            "type": "Internship",
+            "period": "6 Months",
+            "status": "Completed",
+            "desc": "Designed and engineered the official Sakwa Canneries & Exports Inventory Management System. Streamlined stock tracking, batch management, supplier records, and real-time inventory reporting.",
+            "technologies": [
+                "Inventory System",
+                "PHP",
+                "MySQL",
+                "Database Design"
+            ]
+        }
+    ]
+}

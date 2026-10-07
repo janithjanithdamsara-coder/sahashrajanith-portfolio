@@ -1,0 +1,17 @@
+# Deployment & Archive Packages
+portfolio_deploy.zip
+
+# Temporary Scratch Files & Trajectory Logs
+scratch/
+.system_generated/
+.gemini/
+*.png_preview.png
+cv_*.png
+
+# Python Bytecode
+__pycache__/
+*.pyc
+
+# OS System Files
+.DS_Store
+Thumbs.db
