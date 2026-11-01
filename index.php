@@ -34,6 +34,31 @@ $projects = $portfolio['projects'];
   <meta property="og:url" content="https://sahashrajanith.site" />
   <meta property="og:type" content="website" />
 
+  <!-- Search Engine Optimization (SEO) & Verification -->
+  <link rel="canonical" href="https://sahashrajanith.site/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Sahashra Janith" />
+  <meta name="keywords" content="Sahashra, Sahashra Janith, Sahashra Janith Damsara, Sahashra Web Developer, Sahashra Software Engineer, Sahashra Sri Lanka, Full-Stack Developer Galle, Sahashra Portfolio" />
+
+  <!-- Google Knowledge Graph Schema (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sahashra Janith",
+    "alternateName": ["Sahashra", "Sahashra Janith Damsara"],
+    "jobTitle": "Full-Stack Web Developer & Software Engineer",
+    "url": "https://sahashrajanith.site",
+    "image": "https://sahashrajanith.site/assets/images/sahashra_portrait.jpg",
+    "sameAs": [
+      "https://github.com/sahashrajanith",
+      "https://www.linkedin.com/in/sahashra-janith-6422353a1"
+    ],
+    "knowsAbout": ["Full-Stack Web Development", "PHP", "MySQL", "JavaScript", "Android Studio", "LMS Development", "REST APIs"],
+    "description": "Sahashra Janith is a Full-Stack Web Developer & Software Engineer from Sri Lanka specializing in high-performance LMS portals, exam platforms, and web systems."
+  }
+  </script>
+
   <!-- SVG Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2300f2fe'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' font-weight='900' fill='%2305070a'>SJ</text></svg>" />
 
