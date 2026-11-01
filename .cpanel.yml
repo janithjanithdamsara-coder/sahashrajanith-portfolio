@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=$HOME/public_html/
+    - export DEPLOYPATH=/home/sahashra/public_html/
     - /bin/cp -rf * $DEPLOYPATH
     - /bin/cp -f .htaccess $DEPLOYPATH
