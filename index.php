@@ -445,12 +445,32 @@ $projects = $portfolio['projects'];
           </p>
         </div>
 
-        <div class="skills-filter reveal-on-scroll">
-          <button class="filter-btn project-filter-btn active" data-filter="all">All Projects (<?php echo count($projects); ?>)</button>
-          <button class="filter-btn project-filter-btn" data-filter="fullstack">Fullstack & LMS</button>
-          <button class="filter-btn project-filter-btn" data-filter="ecom">E-Commerce</button>
-          <button class="filter-btn project-filter-btn" data-filter="frontend">Web Portals</button>
-          <button class="filter-btn project-filter-btn" data-filter="mobile">Android Apps</button>
+        <div class="project-filters-wrapper reveal-on-scroll">
+          <button class="project-filter-btn active" data-filter="all">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>All Projects</span>
+            <span class="filter-count" data-count="all"><?php echo count($projects); ?></span>
+          </button>
+          <button class="project-filter-btn" data-filter="fullstack">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>LMS & Portals</span>
+            <span class="filter-count" data-count="fullstack">3</span>
+          </button>
+          <button class="project-filter-btn" data-filter="ecom">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>E-Commerce</span>
+            <span class="filter-count" data-count="ecom">1</span>
+          </button>
+          <button class="project-filter-btn" data-filter="frontend">
+            <i class="fa-solid fa-globe"></i>
+            <span>Web Platforms</span>
+            <span class="filter-count" data-count="frontend">2</span>
+          </button>
+          <button class="project-filter-btn" data-filter="mobile">
+            <i class="fa-brands fa-android"></i>
+            <span>Android Apps</span>
+            <span class="filter-count" data-count="mobile">1</span>
+          </button>
         </div>
 
         <div id="projects-grid" class="projects-grid reveal-on-scroll"></div>
@@ -719,6 +739,26 @@ $projects = $portfolio['projects'];
       </div>
     </div>
   </footer>
+
+  <!-- Mobile Floating Quick-Action Dock -->
+  <aside class="mobile-quick-dock" aria-label="Mobile Quick Actions">
+    <a href="https://wa.me/94773093941?text=Hello%20Sahashra,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project!" target="_blank" rel="noopener noreferrer" class="quick-dock-btn dock-whatsapp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="#projects" class="quick-dock-btn dock-projects">
+      <i class="fa-solid fa-code"></i>
+      <span>Projects</span>
+    </a>
+    <a href="assets/Sahashra_Janith_FullStack_Resume.pdf" download target="_blank" class="quick-dock-btn dock-cv">
+      <i class="fa-solid fa-file-arrow-down"></i>
+      <span>CV</span>
+    </a>
+    <a href="#contact" class="quick-dock-btn dock-contact">
+      <i class="fa-solid fa-paper-plane"></i>
+      <span>Contact</span>
+    </a>
+  </aside>
 
   <!-- Application Scripts (Deferred for Maximum Performance) -->
   <script>

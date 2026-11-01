@@ -145,12 +145,14 @@ class ProjectVault {
         if (liveData && Array.isArray(liveData.projects) && liveData.projects.length > 0) {
           this.data = liveData.projects;
           this.renderProjects(this.data);
+          this.updateFilterCounts();
         }
       })
       .catch(() => {});
 
     this.renderProjects(this.data);
     this.initFilters();
+    this.updateFilterCounts();
     this.initModalEvents();
   }
 
@@ -159,8 +161,9 @@ class ProjectVault {
     buttons.forEach(btn => {
       btn.addEventListener('click', (e) => {
         buttons.forEach(b => b.classList.remove('active'));
-        e.target.classList.add('active');
-        const cat = e.target.getAttribute('data-filter');
+        const targetBtn = e.currentTarget;
+        targetBtn.classList.add('active');
+        const cat = targetBtn.getAttribute('data-filter');
         const filtered = cat === 'all' ? this.data : this.data.filter(p => p.category === cat);
         this.renderProjects(filtered);
         if (window.soundFx) window.soundFx.playClickSound();
@@ -168,14 +171,36 @@ class ProjectVault {
     });
   }
 
+  updateFilterCounts() {
+    if (!this.data) return;
+    const counts = { all: this.data.length };
+    this.data.forEach(p => {
+      counts[p.category] = (counts[p.category] || 0) + 1;
+    });
+    document.querySelectorAll('.filter-count').forEach(badge => {
+      const cat = badge.getAttribute('data-count');
+      if (counts[cat] !== undefined) {
+        badge.textContent = counts[cat];
+      }
+    });
+  }
+
   renderProjects(items) {
+    const categoryLabels = {
+      'fullstack': '<i class="fa-solid fa-graduation-cap"></i> LMS & Fullstack',
+      'ecom': '<i class="fa-solid fa-cart-shopping"></i> E-Commerce',
+      'frontend': '<i class="fa-solid fa-globe"></i> Web Platform',
+      'mobile': '<i class="fa-brands fa-android"></i> Android Mobile'
+    };
     this.container.innerHTML = items.map(p => {
       const img = p.image || 'assets/images/project_creative_web.jpg';
+      const badgeHtml = categoryLabels[p.category] || '<i class="fa-solid fa-code"></i> Live Project';
       const tags = Array.isArray(p.tags) ? p.tags : (typeof p.tags === 'string' ? p.tags.split(',') : ['Fullstack']);
       return `
         <div class="project-card tilt-card" data-id="${p.id}">
           <div class="project-img-wrapper">
             <img src="${img}" alt="${p.title}" class="project-img" loading="lazy" />
+            <div class="project-category-badge">${badgeHtml}</div>
             <div class="project-overlay"></div>
           </div>
           <div class="project-body">
