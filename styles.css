@@ -282,44 +282,22 @@ body::before {
 }
 
 .brand-logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
   text-decoration: none;
   color: var(--text-main);
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
   white-space: nowrap;
   flex-shrink: 0;
+  transition: transform 0.25s ease, text-shadow 0.25s ease;
 }
 
-.logo-box {
-  width: 38px;
-  height: 38px;
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-indigo));
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  font-weight: 700;
-  color: #fff;
-  box-shadow: 0 0 18px rgba(0, 242, 254, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  flex-shrink: 0;
-  animation: logo-glow-pulse 4s infinite alternate;
-}
-
-@keyframes logo-glow-pulse {
-  0% { box-shadow: 0 0 15px rgba(0, 242, 254, 0.4); }
-  100% { box-shadow: 0 0 25px rgba(79, 172, 254, 0.8); }
-}
-
-.brand-logo:hover .logo-box {
-  transform: rotate(10deg) scale(1.08);
+.brand-logo:hover {
+  transform: translateY(-1px);
+  text-shadow: 0 0 18px rgba(0, 242, 254, 0.5);
 }
 
 .nav-menu {
@@ -873,7 +851,8 @@ body::before {
   position: relative;
   width: 100%;
   max-width: 380px;
-  padding: 18px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .cyber-ring-outer {
@@ -964,39 +943,36 @@ body::before {
   color: var(--accent-cyan);
 }
 
-.floating-badge {
-  position: absolute;
+.about-photo-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+  justify-content: center;
+}
+
+.photo-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   background: rgba(13, 17, 23, 0.88);
   border: 1px solid var(--border-glass-glow);
   padding: 8px 16px;
   border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  gap: 8px;
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: #fff;
   backdrop-filter: blur(12px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-  z-index: 10;
-  animation: float-badge 5s ease-in-out infinite alternate;
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.badge-top-right {
-  top: -10px;
-  right: -10px;
-}
-
-.badge-bottom-left {
-  bottom: 60px;
-  left: -20px;
-  animation-delay: 2.5s;
-}
-
-@keyframes float-badge {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-8px); }
+.photo-pill-badge:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 8px 24px rgba(0, 242, 254, 0.25);
 }
 
 .about-content {
@@ -1366,11 +1342,6 @@ body::before {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Base Mobile Dock (Desktop Hidden) */
-.mobile-quick-dock {
-  display: none;
 }
 
 /* --- Project Vault --- */
@@ -2331,7 +2302,7 @@ section, .section {
   }
 
   .scroll-top-widget {
-    bottom: 82px;
+    bottom: 16px;
     right: 14px;
     z-index: 99;
   }
@@ -2344,90 +2315,10 @@ section, .section {
   .footer-bottom-bar {
     flex-direction: column;
     text-align: center;
-    padding-bottom: 95px;
+    padding-bottom: 70px;
   }
 
-  /* --- Mobile Quick-Action Dock --- */
-  .mobile-quick-dock {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: fixed;
-    bottom: 14px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 28px);
-    max-width: 440px;
-    background: rgba(10, 14, 23, 0.88);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(0, 242, 254, 0.3);
-    border-radius: 28px;
-    padding: 8px 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65), 0 0 25px rgba(0, 242, 254, 0.18);
-    z-index: 999;
-    gap: 6px;
-  }
-
-  .quick-dock-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    padding: 6px 4px;
-    border-radius: 14px;
-    text-decoration: none;
-    color: var(--text-secondary);
-    transition: all 0.25s ease;
-    font-size: 0.68rem;
-    font-family: var(--font-mono);
-    font-weight: 500;
-    gap: 3px;
-  }
-
-  .quick-dock-btn i {
-    font-size: 1.15rem;
-    transition: transform 0.25s ease, color 0.25s ease;
-  }
-
-  .quick-dock-btn:hover,
-  .quick-dock-btn:active {
-    color: #fff;
-    background: rgba(255, 255, 255, 0.08);
-  }
-
-  .quick-dock-btn:hover i,
-  .quick-dock-btn:active i {
-    transform: scale(1.15);
-  }
-
-  .quick-dock-btn.dock-whatsapp i {
-    color: #25d366;
-  }
-
-  .quick-dock-btn.dock-whatsapp:hover {
-    background: rgba(37, 211, 102, 0.15);
-    color: #25d366;
-  }
-
-  .quick-dock-btn.dock-projects i {
-    color: var(--accent-cyan);
-  }
-
-  .quick-dock-btn.dock-cv i {
-    color: var(--accent-amber);
-  }
-
-  .quick-dock-btn.dock-contact {
-    background: linear-gradient(135deg, rgba(0, 242, 254, 0.2), rgba(79, 70, 229, 0.3));
-    border: 1px solid rgba(0, 242, 254, 0.4);
-    color: #fff;
-  }
-
-  .quick-dock-btn.dock-contact i {
-    color: var(--accent-cyan);
-  }
+  
 }
 
 @media (max-width: 576px) {
@@ -2440,24 +2331,7 @@ section, .section {
   }
 
   .brand-logo {
-    font-size: 1rem;
-    gap: 6px;
-  }
-
-  .brand-logo .logo-text-full {
-    display: none;
-  }
-
-  .brand-logo .logo-text-short {
-    display: inline-block !important;
-    font-size: 1.05rem;
-    letter-spacing: 0.02em;
-  }
-
-  .logo-box {
-    width: 32px;
-    height: 32px;
-    font-size: 0.9rem;
+    font-size: 1.15rem;
   }
 
   .header-actions {

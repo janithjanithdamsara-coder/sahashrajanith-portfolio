@@ -38,7 +38,7 @@
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=2.3" />
 
   <!-- Deferred 3D Libraries & Lucide Icons -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
@@ -68,15 +68,7 @@
   <header class="site-header">
     <div class="container header-content">
       <a href="#hero" class="brand-logo">
-        <div class="logo-box" title="Sahashra Janith Developer Logo">
-          <svg viewBox="0 0 100 100" width="24" height="24" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M 38 30 L 18 50 L 38 70 M 62 30 L 82 50 L 62 70 M 36 50 L 64 50" />
-            <circle cx="18" cy="50" r="6" fill="currentColor" />
-            <circle cx="82" cy="50" r="6" fill="currentColor" />
-          </svg>
-        </div>
         <span class="logo-text-full">SAHASHRA<span style="color:var(--accent-cyan)">.JANITH</span></span>
-        <span class="logo-text-short" style="display:none;">SJ<span style="color:var(--accent-cyan)">.DEV</span></span>
       </a>
 
       <!-- Desktop Navigation Menu -->
@@ -111,8 +103,7 @@
   <aside id="mobile-nav-drawer" class="mobile-nav-drawer">
     <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:24px;">
       <div class="brand-logo">
-        <div class="logo-box">SJ</div>
-        <span>SAHASHRA</span>
+        <span class="logo-text-full">SAHASHRA<span style="color:var(--accent-cyan)">.JANITH</span></span>
       </div>
       <button id="mobile-menu-close" class="icon-btn">
         <i data-lucide="x"></i>
@@ -232,15 +223,16 @@
                 </div>
               </div>
 
-              <!-- Floating Badges around Photo -->
-              <div class="floating-badge badge-top-right">
-                <i class="fa-solid fa-bolt" style="color:var(--accent-cyan);"></i>
-                <span>15+ Live Web Systems</span>
-              </div>
-
-              <div class="floating-badge badge-bottom-left">
-                <i class="fa-solid fa-graduation-cap" style="color:var(--accent-emerald);"></i>
-                <span>NVQ 4 & ICT Diploma</span>
+              <!-- Badges neatly placed below photo (Option 1) -->
+              <div class="about-photo-badges">
+                <div class="photo-pill-badge">
+                  <i class="fa-solid fa-bolt" style="color:var(--accent-cyan);"></i>
+                  <span>15+ Live Web Systems</span>
+                </div>
+                <div class="photo-pill-badge">
+                  <i class="fa-solid fa-graduation-cap" style="color:var(--accent-emerald);"></i>
+                  <span>NVQ 4 & ICT Diploma</span>
+                </div>
               </div>
             </div>
           </div>
@@ -675,13 +667,6 @@
         <!-- Column 1: Brand & Bio -->
         <div>
           <a href="#hero" class="brand-logo" style="margin-bottom:16px; display:inline-flex;">
-            <div class="logo-box" title="Sahashra Janith Developer Logo">
-              <svg viewBox="0 0 100 100" width="24" height="24" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M 38 30 L 18 50 L 38 70 M 62 30 L 82 50 L 62 70 M 36 50 L 64 50" />
-                <circle cx="18" cy="50" r="6" fill="currentColor" />
-                <circle cx="82" cy="50" r="6" fill="currentColor" />
-              </svg>
-            </div>
             <span class="logo-text-full">SAHASHRA<span style="color:var(--accent-cyan)">.JANITH</span></span>
           </a>
           <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6; margin-bottom:20px;">
@@ -750,26 +735,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Mobile Floating Quick-Action Dock -->
-  <aside class="mobile-quick-dock" aria-label="Mobile Quick Actions">
-    <a href="https://wa.me/94773093941?text=Hello%20Sahashra,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project!" target="_blank" rel="noopener noreferrer" class="quick-dock-btn dock-whatsapp">
-      <i class="fa-brands fa-whatsapp"></i>
-      <span>WhatsApp</span>
-    </a>
-    <a href="#projects" class="quick-dock-btn dock-projects">
-      <i class="fa-solid fa-code"></i>
-      <span>Projects</span>
-    </a>
-    <a href="assets/Sahashra_Janith_FullStack_Resume.pdf" download target="_blank" class="quick-dock-btn dock-cv">
-      <i class="fa-solid fa-file-arrow-down"></i>
-      <span>CV</span>
-    </a>
-    <a href="#contact" class="quick-dock-btn dock-contact">
-      <i class="fa-solid fa-paper-plane"></i>
-      <span>Contact</span>
-    </a>
-  </aside>
 
   <!-- Application Scripts (Deferred for Maximum Performance) -->
   <script src="js/audio.js" defer></script>
