@@ -152,11 +152,6 @@ $projects = $portfolio['projects'];
           
           <!-- Left Column: Hero Text Content -->
           <div class="hero-text-content reveal-on-scroll">
-            <div class="hero-tag">
-              <i data-lucide="award"></i>
-              <span><?php echo htmlspecialchars($hero['tagline'] ?? 'NVQ 4 CERTIFIED & DIPLOMA IN ICT (NVTI)'); ?></span>
-            </div>
-
             <h1 class="hero-title">
               Hello, I'm <span class="hero-name"><?php echo htmlspecialchars($hero['name'] ?? 'Sahashra Janith'); ?></span>
             </h1>

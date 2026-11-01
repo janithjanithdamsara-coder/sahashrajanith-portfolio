@@ -6,6 +6,9 @@ if (is_admin_logged_in()) {
     exit;
 }
 
+// Gatekeeper: require valid secret key authorization to access admin login
+check_admin_gate();
+
 $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
