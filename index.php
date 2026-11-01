@@ -35,6 +35,7 @@ $projects = $portfolio['projects'];
   <meta property="og:type" content="website" />
 
   <!-- Search Engine Optimization (SEO) & Verification -->
+  <meta name="google-site-verification" content="foj3BRnJ9HxGMsXSbAKuZ3CNFHmKP5Di-CvJr-Ioxb4" />
   <link rel="canonical" href="https://sahashrajanith.site/" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="author" content="Sahashra Janith" />
