@@ -168,7 +168,7 @@ $projects = $portfolio['projects'];
             </div>
 
             <h1 class="hero-title">
-              Hello, I'm <span class="hero-name"><?php echo htmlspecialchars($hero['name'] ?? 'Sahashra Janith'); ?></span>
+              Hello, I'm <span class="hero-name"><?php echo htmlspecialchars($hero['name'] ?? 'Sahashra Janith'); ?></span> <span style="color:var(--accent-cyan); font-size: 0.65em;">[Test Update 🚀]</span>
             </h1>
 
             <p class="hero-subtitle">
