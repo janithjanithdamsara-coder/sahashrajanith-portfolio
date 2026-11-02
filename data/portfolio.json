@@ -8,9 +8,9 @@
         "email": "sahashrajanith@gmail.com",
         "phone": "+94 77 309 3941",
         "location": "Galle, Sri Lanka",
-        "github": "https:\/\/github.com\/sahashrajanith",
-        "linkedin": "https:\/\/www.linkedin.com\/in\/sahashra-janith-6422353a1",
-        "whatsapp": "https:\/\/wa.me\/94773093941",
+        "github": "https://github.com/sahashrajanith",
+        "linkedin": "https://www.linkedin.com/in/sahashra-janith-6422353a1",
+        "whatsapp": "https://wa.me/94773093941",
         "resume_url": "#",
         "stats": [
             {
@@ -118,7 +118,7 @@
             "title": "Zenith Academy LMS & Exam Portal",
             "category": "fullstack",
             "desc": "Comprehensive educational academy platform featuring online exam management, student portals, and digital course resources.",
-            "image": "assets\/images\/Screenshot_2026-08-27_111452.png",
+            "image": "assets/images/Screenshot_2026-08-27_111452.webp",
             "tags": [
                 "PHP",
                 "MySQL",
@@ -126,8 +126,8 @@
                 "LMS",
                 "Exam Engine"
             ],
-            "demoUrl": "https:\/\/exampro.site\/",
-            "githubUrl": "https:\/\/github.com\/sahashrajanith",
+            "demoUrl": "https://exampro.site/",
+            "githubUrl": "https://github.com/sahashrajanith",
             "longDesc": "Zenith Academy is a full-featured Learning Management & Online Examination System built to streamline tuition operations. Features timed online quizzes, student progress dashboards, automated grade calculation, and secure resource downloads."
         },
         {
@@ -135,15 +135,15 @@
             "title": "ScholarPro Academic Evaluation Portal",
             "category": "fullstack",
             "desc": "Advanced web platform designed for academic testing, online exams, student performance tracking, and resource distribution.",
-            "image": "assets\/images\/Screenshot_2026-08-27_111649.png",
+            "image": "assets/images/Screenshot_2026-08-27_111649.webp",
             "tags": [
                 "PHP",
                 "MySQL",
                 "Glassmorphic UI",
                 "Web Portal"
             ],
-            "demoUrl": "https:\/\/scholarpro.exampro.site\/",
-            "githubUrl": "https:\/\/github.com\/sahashrajanith",
+            "demoUrl": "https://scholarpro.exampro.site/",
+            "githubUrl": "https://github.com/sahashrajanith",
             "longDesc": "ScholarPro empowers educational institutions with an online testing environment. Provides instant result generation, detailed subject-wise analytical reports, and interactive study modules."
         },
         {
@@ -151,15 +151,15 @@
             "title": "Chaminda sumanathilaka Science Learning Portal",
             "category": "frontend",
             "desc": "Dedicated online science education website featuring digital lessons, interactive quiz modules, and study materials.",
-            "image": "assets\/images\/Screenshot_2026-08-27_111617.png",
+            "image": "assets/images/Screenshot_2026-08-27_111617.webp",
             "tags": [
                 "PHP",
                 "MySQL",
-                "HTML5\/CSS3",
+                "HTML5/CSS3",
                 "Educational Web"
             ],
-            "demoUrl": "https:\/\/science.sahashrajanith.site\/",
-            "githubUrl": "https:\/\/github.com\/sahashrajanith",
+            "demoUrl": "https://science.sahashrajanith.site/",
+            "githubUrl": "https://github.com/sahashrajanith",
             "longDesc": "A specialized web portal tailored for science students. Includes categorized subject modules, interactive lesson quizzes, downloadable revision papers, and direct student inquiry channels."
         },
         {
@@ -167,7 +167,7 @@
             "title": "Bloomy Haven E-Commerce Store",
             "category": "ecom",
             "desc": "Full-featured online store with product catalogs, shopping cart engine, responsive product showcase, and checkout system.",
-            "image": "assets\/images\/project_3d_ecom.jpg",
+            "image": "assets/images/project_3d_ecom.webp",
             "tags": [
                 "PHP",
                 "MySQL",
@@ -175,8 +175,8 @@
                 "Cart API",
                 "Fullstack"
             ],
-            "demoUrl": "https:\/\/bloomyhaven.store\/",
-            "githubUrl": "https:\/\/github.com\/sahashrajanith",
+            "demoUrl": "https://bloomyhaven.store/",
+            "githubUrl": "https://github.com/sahashrajanith",
             "longDesc": "Bloomy Haven is an e-commerce platform built for online shopping. Delivers fluid product filtering, dynamic cart drawer management, category browsing, and order confirmation workflows."
         },
         {
@@ -184,31 +184,31 @@
             "title": "SAKWA CANNERIES & EXPORTS Inventory System",
             "category": "frontend",
             "desc": "Official web domain platform hosting live web applications, digital client services, and modern software solutions.",
-            "image": "assets\/images\/Screenshot_2026-08-27_140420.png",
+            "image": "assets/images/Screenshot_2026-08-27_140420.webp",
             "tags": [
                 "Web Platform",
                 "PHP",
-                "HTML5\/CSS3",
+                "HTML5/CSS3",
                 "JavaScript"
             ],
-            "demoUrl": "https:\/\/sahashrajanith.site\/",
-            "githubUrl": "https:\/\/github.com\/sahashrajanith",
+            "demoUrl": "https://sahashrajanith.site/",
+            "githubUrl": "https://github.com/sahashrajanith",
             "longDesc": "SAKWA CANNERIES & EXPORTS Inventory System"
         },
         {
             "id": "al-class-mgmt",
             "title": "AL Class Management System",
             "category": "fullstack",
-            "desc": "Student and class management web portal built for A\/L tuition institutes to handle enrollments, fees, and attendance.",
-            "image": "assets\/images\/Screenshot_2026-08-27_140246.png",
+            "desc": "Student and class management web portal built for A/L tuition institutes to handle enrollments, fees, and attendance.",
+            "image": "assets/images/Screenshot_2026-08-27_140246.webp",
             "tags": [
                 "PHP",
                 "MySQL",
                 "Management System",
                 "Fullstack"
             ],
-            "demoUrl": "https:\/\/futuremindssite.site",
-            "githubUrl": "https:\/\/github.com\/AL-Class-manegement-System\/AL-Class-Management-System.git",
+            "demoUrl": "https://futuremindssite.site",
+            "githubUrl": "https://github.com/AL-Class-manegement-System/AL-Class-Management-System.git",
             "longDesc": "Hosted online tuition class management system designed for managing student profiles, class schedules, fee payments, and attendance records efficiently."
         },
         {
@@ -216,7 +216,7 @@
             "title": "Microfinance  Android Mobile App",
             "category": "mobile",
             "desc": "Microfinance  Android Mobile App",
-            "image": "assets\/images\/WhatsApp_Image_2026-08-27_at_1.58.29_PM.jpeg",
+            "image": "assets/images/WhatsApp_Image_2026-08-27_at_1.58.29_PM.webp",
             "tags": [
                 "Android",
                 "Java",
@@ -224,8 +224,8 @@
                 "XML",
                 "API"
             ],
-            "demoUrl": "https:\/\/github.com\/sahashrajanith\/future-mind-app.git",
-            "githubUrl": "https:\/\/github.com\/sahashrajanith\/future-mind-app.git",
+            "demoUrl": "https://github.com/sahashrajanith/future-mind-app.git",
+            "githubUrl": "https://github.com/sahashrajanith/future-mind-app.git",
             "longDesc": "Native Android mobile application built with Java enabling students and tuition administrators to access class schedules, receive real-time notifications, and track course updates on mobile devices."
         },
         {
@@ -234,14 +234,14 @@
             "category": "ecom",
             "desc": "Smart Retail POS Software for Modern Sri Lankan Stores",
             "longDesc": "Keep billing non-stop during power cuts and internet downtime. Manage Barcode inventory, Customer Credit (\u0dab\u0dba \u0db4\u0ddc\u0dad), and Daily Profit from any Android phone, tab, or POS machine.",
-            "image": "assets\/images\/Screenshot_2026-09-30_114516.png",
+            "image": "assets/images/Screenshot_2026-09-30_114516.webp",
             "tags": [
                 "PHP",
                 "MySQL",
                 "JavaScript"
             ],
             "demoUrl": "",
-            "githubUrl": "https:\/\/github.com\/janithjanithdamsara-coder\/myposlanka.git"
+            "githubUrl": "https://github.com/janithjanithdamsara-coder/myposlanka.git"
         }
     ],
     "messages": [

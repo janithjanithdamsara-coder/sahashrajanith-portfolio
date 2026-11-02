@@ -64,7 +64,7 @@ class ThreeBackgroundScene {
   }
 
   createParticles() {
-    const particleCount = window.innerWidth < 768 ? 400 : 700;
+    const particleCount = window.innerWidth < 768 ? 140 : 600;
     const geometry = new THREE.BufferGeometry();
     const positions = new Float32Array(particleCount * 3);
     const colors = new Float32Array(particleCount * 3);
@@ -140,8 +140,18 @@ class ThreeBackgroundScene {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  if (typeof THREE !== 'undefined') {
+function initThreeScene() {
+  if (typeof THREE !== 'undefined' && !window.threeScene) {
     window.threeScene = new ThreeBackgroundScene();
   }
-});
+}
+
+if ('requestIdleCallback' in window) {
+  window.addEventListener('load', () => {
+    requestIdleCallback(initThreeScene, { timeout: 2500 });
+  });
+} else {
+  window.addEventListener('load', () => {
+    setTimeout(initThreeScene, 300);
+  });
+}

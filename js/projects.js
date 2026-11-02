@@ -25,7 +25,7 @@ const projectsData = [
     title: 'ScholarPro Academic Evaluation Portal',
     category: 'fullstack',
     desc: 'Advanced web platform designed for academic testing, online exams, student performance tracking, and resource distribution.',
-    image: 'assets/images/project_creative_web.jpg',
+    image: 'assets/images/project_creative_web.webp',
     tags: ['PHP', 'MySQL', 'Glassmorphic UI', 'Web Portal'],
     demoUrl: 'https://scholarpro.exampro.site/',
     githubUrl: 'https://github.com/sahashrajanith',
@@ -76,7 +76,7 @@ const projectsData = [
     title: 'Sahashra Janith Custom Web Platform',
     category: 'frontend',
     desc: 'Official web domain platform hosting live web applications, digital client services, and modern software solutions.',
-    image: 'assets/images/project_creative_web.jpg',
+    image: 'assets/images/project_creative_web.webp',
     tags: ['Web Platform', 'PHP', 'HTML5/CSS3', 'JavaScript'],
     demoUrl: 'https://sahashrajanith.site/',
     githubUrl: 'https://github.com/sahashrajanith',
@@ -193,13 +193,13 @@ class ProjectVault {
       'mobile': '<i class="fa-brands fa-android"></i> Android Mobile'
     };
     this.container.innerHTML = items.map(p => {
-      const img = p.image || 'assets/images/project_creative_web.jpg';
+      const img = p.image || 'assets/images/project_creative_web.webp';
       const badgeHtml = categoryLabels[p.category] || '<i class="fa-solid fa-code"></i> Live Project';
       const tags = Array.isArray(p.tags) ? p.tags : (typeof p.tags === 'string' ? p.tags.split(',') : ['Fullstack']);
       return `
         <div class="project-card tilt-card" data-id="${p.id}">
           <div class="project-img-wrapper">
-            <img src="${img}" alt="${p.title}" class="project-img" loading="lazy" />
+            <img src="${img}" alt="${p.title}" class="project-img" loading="lazy" width="600" height="338" />
             <div class="project-category-badge">${badgeHtml}</div>
             <div class="project-overlay"></div>
           </div>
@@ -267,7 +267,7 @@ class ProjectVault {
   openModal(p) {
     if (!this.modalOverlay || !this.modalCard) return;
 
-    const img = p.image || 'assets/images/project_creative_web.jpg';
+    const img = p.image || 'assets/images/project_creative_web.webp';
     const longDesc = p.longDesc || p.desc || 'Comprehensive web application developed by Sahashra Janith.';
     const features = Array.isArray(p.features) && p.features.length ? p.features : [
       'High performance backend & responsive design system',

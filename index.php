@@ -69,10 +69,12 @@ $projects = $portfolio['projects'];
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 
   <!-- Preload Hero LCP Image -->
-  <link rel="preload" as="image" href="assets/images/sahashra_portrait_color.png" fetchpriority="high" type="image/png" />
+  <link rel="preload" as="image" href="assets/images/sahashra_portrait_color.webp" fetchpriority="high" type="image/webp" />
 
   <!-- Premium Modern Google Fonts with display=swap -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
 
   <!-- Asynchronous FontAwesome 6 Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
@@ -218,7 +220,10 @@ $projects = $portfolio['projects'];
           <!-- Right Column: Direct Seamless Cutout Portrait (No Card Frame) -->
           <div class="hero-photo-column reveal-on-scroll">
             <div class="direct-portrait-wrapper">
-              <img src="assets/images/sahashra_portrait_color.png" alt="Sahashra Janith Software Developer" class="direct-portrait-img" />
+              <picture>
+                <source srcset="assets/images/sahashra_portrait_color.webp" type="image/webp">
+                <img src="assets/images/sahashra_portrait_color.png" alt="Sahashra Janith Software Developer" class="direct-portrait-img" width="644" height="824" fetchpriority="high" />
+              </picture>
             </div>
           </div>
 
@@ -241,7 +246,10 @@ $projects = $portfolio['projects'];
           <div class="about-photo-wrapper reveal-on-scroll">
             <div class="cyber-photo-container">
               <div class="about-portrait-card">
-                <img src="assets/images/sahashra_portrait.jpg" alt="<?php echo htmlspecialchars($hero['name'] ?? ''); ?> Portrait" class="about-portrait-img" />
+                <picture>
+                  <source srcset="assets/images/sahashra_portrait.webp" type="image/webp">
+                  <img src="assets/images/sahashra_portrait.jpg" alt="<?php echo htmlspecialchars($hero['name'] ?? ''); ?> Portrait" class="about-portrait-img" loading="lazy" width="850" height="1050" />
+                </picture>
                 <div class="portrait-overlay-gradient"></div>
                 
                 <div class="portrait-name-tag">
