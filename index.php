@@ -81,11 +81,8 @@ $projects = $portfolio['projects'];
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=2.5" />
-
-  <!-- Deferred 3D Libraries & Lucide Icons -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
-  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <link rel="preload" as="style" href="styles.css?v=2.6" />
+  <link rel="stylesheet" href="styles.css?v=2.6" />
 </head>
 <body class="theme-cyber">
 
@@ -222,7 +219,7 @@ $projects = $portfolio['projects'];
             <div class="direct-portrait-wrapper">
               <picture>
                 <source srcset="assets/images/sahashra_portrait_color.webp" type="image/webp">
-                <img src="assets/images/sahashra_portrait_color.png" alt="Sahashra Janith Software Developer" class="direct-portrait-img" width="644" height="824" fetchpriority="high" />
+                <img src="assets/images/sahashra_portrait_color.png" alt="Sahashra Janith Software Developer" class="direct-portrait-img" width="644" height="824" fetchpriority="high" decoding="async" />
               </picture>
             </div>
           </div>
@@ -248,7 +245,7 @@ $projects = $portfolio['projects'];
               <div class="about-portrait-card">
                 <picture>
                   <source srcset="assets/images/sahashra_portrait.webp" type="image/webp">
-                  <img src="assets/images/sahashra_portrait.jpg" alt="<?php echo htmlspecialchars($hero['name'] ?? ''); ?> Portrait" class="about-portrait-img" loading="lazy" width="850" height="1050" />
+                  <img src="assets/images/sahashra_portrait.jpg" alt="<?php echo htmlspecialchars($hero['name'] ?? ''); ?> Portrait" class="about-portrait-img" loading="lazy" width="850" height="1050" decoding="async" />
                 </picture>
                 <div class="portrait-overlay-gradient"></div>
                 
@@ -750,15 +747,33 @@ $projects = $portfolio['projects'];
     </div>
   </footer>
 
-  <!-- Application Scripts (Deferred for Maximum Performance) -->
+  <!-- Application Scripts (Optimized for 95-100 PageSpeed) -->
   <script>
     window.portfolioData = <?php echo json_encode($portfolio); ?>;
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.min.js" defer></script>
   <script src="js/audio.js" defer></script>
-  <script src="js/threeScene.js" defer></script>
   <script src="js/terminal.js" defer></script>
   <script src="js/skills.js" defer></script>
   <script src="js/projects.js" defer></script>
   <script src="js/app.js" defer></script>
+
+  <!-- Desktop-Only Three.js Background Particles (Eliminates 600KB+ on Mobile) -->
+  <script>
+    if (window.innerWidth >= 768) {
+      window.addEventListener('load', function() {
+        var tScript = document.createElement('script');
+        tScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+        tScript.defer = true;
+        tScript.onload = function() {
+          var sScript = document.createElement('script');
+          sScript.src = 'js/threeScene.js';
+          sScript.defer = true;
+          document.body.appendChild(sScript);
+        };
+        document.body.appendChild(tScript);
+      });
+    }
+  </script>
 </body>
 </html>
