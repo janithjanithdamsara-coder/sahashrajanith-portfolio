@@ -1,3 +1,10 @@
+
+# Enable LiteSpeed Server-Side Page Cache
+<IfModule LiteSpeed>
+  CacheLookup public on
+  CacheEngine on
+</IfModule>
+
 # ==============================================================================
 # HIGH PERFORMANCE GPAGE SPEED OPTIMIZATIONS & CACHING (.htaccess)
 # ==============================================================================
