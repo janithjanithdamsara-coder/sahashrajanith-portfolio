@@ -196,11 +196,6 @@ $projects = $portfolio['projects'];
                 <i data-lucide="mail"></i>
                 <span>Hire Me</span>
               </a>
-
-              <a href="assets/Sahashra_Janith_CV.pdf" download class="btn-secondary" style="border-color:var(--accent-cyan); color:var(--accent-cyan);">
-                <i class="fa-solid fa-file-pdf"></i>
-                <span>Download CV</span>
-              </a>
             </div>
 
             <div style="display:flex; gap:16px; margin-top:32px; align-items:center;">

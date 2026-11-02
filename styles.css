@@ -488,14 +488,16 @@ body::before {
 .hero-text-content {
   text-align: left;
   max-width: 600px;
+  align-self: center;
+  padding-bottom: 24px;
 }
 
 /* --- Hero 2-Column Layout & Animated Photo Frame --- */
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  align-items: flex-end;
+  gap: 32px;
+  align-items: center;
   width: 100%;
 }
 
@@ -503,6 +505,7 @@ body::before {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  align-self: flex-end;
   position: relative;
 }
 
