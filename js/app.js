@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initContactForm();
   initGlobalShortcuts();
-  initVisitorTracker();
+  window.addEventListener('load', () => setTimeout(initVisitorTracker, 2000));
 });
 
 /* --- Live Visitor Tracker Counter --- */
@@ -31,6 +31,9 @@ function initVisitorTracker() {
 
 /* --- Custom Cursor Tracking --- */
 function initCustomCursor() {
+  if (window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 768) {
+    return; // Completely disable animation loop on mobile/touch screens
+  }
   const cursor = document.getElementById('custom-cursor');
   const follower = document.getElementById('custom-cursor-follower');
 

@@ -69,7 +69,8 @@ $projects = $portfolio['projects'];
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 
   <!-- Preload Hero LCP Image -->
-  <link rel="preload" as="image" href="assets/images/sahashra_portrait_color.webp" fetchpriority="high" type="image/webp" />
+  <link rel="preload" as="image" href="assets/images/sahashra_portrait_color_mobile.webp" media="(max-width: 768px)" fetchpriority="high" type="image/webp" />
+  <link rel="preload" as="image" href="assets/images/sahashra_portrait_color.webp" media="(min-width: 769px)" fetchpriority="high" type="image/webp" />
 
   <!-- Premium Modern Google Fonts with display=swap -->
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
@@ -218,6 +219,7 @@ $projects = $portfolio['projects'];
           <div class="hero-photo-column reveal-on-scroll">
             <div class="direct-portrait-wrapper">
               <picture>
+                <source media="(max-width: 768px)" srcset="assets/images/sahashra_portrait_color_mobile.webp" type="image/webp">
                 <source srcset="assets/images/sahashra_portrait_color.webp" type="image/webp">
                 <img src="assets/images/sahashra_portrait_color.png" alt="Sahashra Janith Software Developer" class="direct-portrait-img" width="644" height="824" fetchpriority="high" decoding="async" />
               </picture>

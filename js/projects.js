@@ -138,17 +138,19 @@ class ProjectVault {
     if (!this.container) return;
     this.data = (window.portfolioData && window.portfolioData.projects && window.portfolioData.projects.length) ? window.portfolioData.projects : projectsData;
     
-    // Fetch live portfolio.json data asynchronously
-    fetch('api/get_data.php')
-      .then(res => res.json())
-      .then(liveData => {
-        if (liveData && Array.isArray(liveData.projects) && liveData.projects.length > 0) {
-          this.data = liveData.projects;
-          this.renderProjects(this.data);
-          this.updateFilterCounts();
-        }
-      })
-      .catch(() => {});
+    // Data is pre-loaded via window.portfolioData; fetch only if absent
+    if (!window.portfolioData || !window.portfolioData.projects) {
+      fetch('api/get_data.php')
+        .then(res => res.json())
+        .then(liveData => {
+          if (liveData && Array.isArray(liveData.projects) && liveData.projects.length > 0) {
+            this.data = liveData.projects;
+            this.renderProjects(this.data);
+            this.updateFilterCounts();
+          }
+        })
+        .catch(() => {});
+    }
 
     this.renderProjects(this.data);
     this.initFilters();
