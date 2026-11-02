@@ -1,4 +1,33 @@
 
+# ==============================================================================
+# OWASP SECURITY HARDENING & ACCESS CONTROL
+# ==============================================================================
+
+# 1. Prevent Directory Browsing
+Options -Indexes
+
+# 2. Block Direct Web Access to Sensitive Files (Data, Configs, Git, Logs, DBs)
+<FilesMatch "\.(json|lock|log|env|git.*|md|sql|bak|swp)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order deny,allow
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# 3. Block Direct Web Access to SMTP and Server Configs
+<Files "smtp_config.php">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order deny,allow
+    Deny from all
+  </IfModule>
+</Files>
+
 # Enable LiteSpeed Server-Side Page Cache
 <IfModule LiteSpeed>
   CacheLookup public on
@@ -48,5 +77,8 @@
   
   # Security & Performance Headers
   Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
   Header set X-XSS-Protection "1; mode=block"
 </IfModule>

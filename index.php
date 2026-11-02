@@ -132,6 +132,11 @@ $projects = $portfolio['projects'];
       </nav>
 
       <div class="header-actions">
+        <a href="assets/Sahashra_Janith_CV.pdf" target="_blank" class="nav-btn-cv" title="View / Download Official CV" style="display:inline-flex; align-items:center; gap:6px; padding:6px 14px; background:rgba(0,242,254,0.1); border:1px solid rgba(0,242,254,0.3); border-radius:var(--radius-full); color:var(--accent-cyan); font-size:0.85rem; font-weight:600; text-decoration:none; transition:var(--transition-fast);">
+          <i data-lucide="file-text" style="width:16px; height:16px;"></i>
+          <span>CV</span>
+        </a>
+
         <div class="status-badge" title="Status: <?php echo htmlspecialchars($hero['availability'] ?? 'Available for Hire'); ?>">
           <div class="status-dot"></div>
           <span><?php echo htmlspecialchars($hero['availability'] ?? 'Available for Hire'); ?></span>
@@ -161,6 +166,7 @@ $projects = $portfolio['projects'];
       <li><a href="#about" class="mobile-nav-link"><i data-lucide="user"></i> About Me</a></li>
       <li><a href="#skills" class="mobile-nav-link"><i data-lucide="code-2"></i> Tech Skills</a></li>
       <li><a href="#projects" class="mobile-nav-link"><i data-lucide="folder-git-2"></i> Live Projects</a></li>
+      <li><a href="assets/Sahashra_Janith_CV.pdf" target="_blank" class="mobile-nav-link" style="color:var(--accent-cyan);"><i data-lucide="file-text"></i> View CV (PDF)</a></li>
       <li><a href="#terminal" class="mobile-nav-link"><i data-lucide="terminal"></i> Developer Terminal</a></li>
       <li><a href="#contact" class="mobile-nav-link"><i data-lucide="mail"></i> Contact Me</a></li>
     </ul>
@@ -637,6 +643,12 @@ $projects = $portfolio['projects'];
           <div class="contact-form-column reveal-on-scroll">
             <div class="contact-card">
               <form id="contact-form" class="contact-form">
+                <!-- Anti-Spam Honeypot Field (Inaccessible to human users, traps automated bots) -->
+                <div style="display:none !important; visibility:hidden; opacity:0; position:absolute; left:-9999px;" aria-hidden="true">
+                  <label for="website_hp">Leave this blank</label>
+                  <input type="text" id="website_hp" name="website_hp" tabindex="-1" autocomplete="off" />
+                </div>
+
                 <div class="form-group">
                   <label for="contact-name" class="form-label">Your Full Name</label>
                   <input type="text" id="contact-name" name="name" required placeholder="John Doe" class="form-input" />

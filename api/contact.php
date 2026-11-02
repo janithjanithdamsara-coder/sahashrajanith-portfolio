@@ -1,6 +1,11 @@
 <?php
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');
+
+$allowedOrigins = ['https://sahashrajanith.site', 'http://localhost'];
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+if (in_array($origin, $allowedOrigins)) {
+    header('Access-Control-Allow-Origin: ' . $origin);
+}
 header('Access-Control-Allow-Methods: POST');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -18,6 +23,25 @@ $name    = isset($input['name']) ? trim($input['name']) : '';
 $email   = isset($input['email']) ? trim($input['email']) : '';
 $subject = isset($input['subject']) ? trim($input['subject']) : 'Portfolio Inquiry';
 $message = isset($input['message']) ? trim($input['message']) : '';
+
+// 1. Honeypot Spam Trap (Silently accept bot spam without saving or sending)
+if (!empty($input['website_hp']) || !empty($_POST['website_hp'])) {
+    echo json_encode(['success' => true, 'message' => 'Thank you for reaching out! Your message has been received by Sahashra Janith.']);
+    exit;
+}
+
+// 2. Input Length & Format Validation (Anti-Buffer Bloat & XSS Prevention)
+if (strlen($name) > 100 || strlen($email) > 120 || strlen($subject) > 150 || strlen($message) > 4000) {
+    http_response_code(400);
+    echo json_encode(['success' => false, 'message' => 'Input exceeds maximum allowed length.']);
+    exit;
+}
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    http_response_code(400);
+    echo json_encode(['success' => false, 'message' => 'Please provide a valid email address.']);
+    exit;
+}
 
 if (empty($name) || empty($email) || empty($message)) {
     http_response_code(400);

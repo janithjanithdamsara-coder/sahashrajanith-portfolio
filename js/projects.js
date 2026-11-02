@@ -301,13 +301,15 @@ class ProjectVault {
           ${tags.map(t => `<span class="tag" style="padding:6px 14px; font-size:0.85rem;">${t.trim()}</span>`).join('')}
         </div>
 
-        <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
-          ${p.demoUrl ? `
-            <a href="${p.demoUrl}" target="_blank" class="btn-primary" style="padding:12px 24px; font-size:0.95rem;">
-              <span>Visit Live Platform</span>
-              <i data-lucide="external-link"></i>
-            </a>
-          ` : ''}
+        <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap; margin-top:8px;">
+          <a href="#contact" class="btn-primary" onclick="window.projectVault.closeModal()" style="padding:12px 24px; font-size:0.95rem;">
+            <span>Discuss System Requirements</span>
+            <i data-lucide="send"></i>
+          </a>
+          <div style="display:inline-flex; align-items:center; gap:8px; color:var(--accent-emerald); font-size:0.88rem; font-weight:600; padding:8px 14px; background:rgba(16,185,129,0.08); border:1px solid rgba(16,185,129,0.25); border-radius:var(--radius-full);">
+            <i data-lucide="shield-check"></i>
+            <span>Architecture & Code Verified</span>
+          </div>
         </div>
       </div>
     `;

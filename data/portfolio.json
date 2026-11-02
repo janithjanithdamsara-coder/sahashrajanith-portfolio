@@ -11,7 +11,7 @@
         "github": "https://github.com/sahashrajanith",
         "linkedin": "https://www.linkedin.com/in/sahashra-janith-6422353a1",
         "whatsapp": "https://wa.me/94773093941",
-        "resume_url": "#",
+        "resume_url": "assets/Sahashra_Janith_CV.pdf",
         "stats": [
             {
                 "num": "15+",
@@ -26,8 +26,8 @@
                 "label": "ICT Diploma"
             },
             {
-                "num": "100%",
-                "label": "Client Uptime"
+                "num": "Clean",
+                "label": "Architecture"
             }
         ],
         "about_text_1": "I am a passionate Full-Stack Web Developer & Software Engineer based in Sri Lanka. I hold an NVQ Level 4 in Software Development and a Diploma in Information & Communication Technology (ICT) from the National Vocational Training Institute (NVTI).",
@@ -191,7 +191,7 @@
                 "HTML5/CSS3",
                 "JavaScript"
             ],
-            "demoUrl": "https://sahashrajanith.site/",
+            "demoUrl": "",
             "githubUrl": "https://github.com/sahashrajanith",
             "longDesc": "SAKWA CANNERIES & EXPORTS Inventory System"
         },
