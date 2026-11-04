@@ -18,6 +18,9 @@
   # 3. Canonicalize /index.php to /
   RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php [NC]
   RewriteRule ^index\.php$ https://sahashrajanith.site/ [R=301,L]
+
+  # 4. Redirect CV PDF to Homepage (Ensure all search clicks land on the main website)
+  RewriteRule ^assets/Sahashra_Janith_CV\.pdf$ https://sahashrajanith.site/ [R=301,L]
 </IfModule>
 
 # ==============================================================================
