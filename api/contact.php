@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-$allowedOrigins = ['https://sahashrajanith.site', 'http://localhost'];
+$allowedOrigins = ['https://sahashrajanith.site', 'https://www.sahashrajanith.site', 'http://localhost'];
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
 if (in_array($origin, $allowedOrigins)) {
     header('Access-Control-Allow-Origin: ' . $origin);

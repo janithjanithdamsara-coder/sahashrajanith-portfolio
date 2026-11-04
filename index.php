@@ -1,4 +1,17 @@
 <?php
+// Force Canonical Domain (non-www and HTTPS) to resolve GSC duplicate canonical issues
+$requestHost = $_SERVER['HTTP_HOST'] ?? '';
+$isHttps = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443);
+if (stripos($requestHost, 'www.') === 0 || (!$isHttps && $requestHost !== 'localhost' && $requestHost !== '127.0.0.1')) {
+    $canonicalHost = preg_replace('/^www\./i', '', $requestHost);
+    $uri = $_SERVER['REQUEST_URI'] ?? '/';
+    if (!empty($canonicalHost) && $canonicalHost !== 'localhost' && $canonicalHost !== '127.0.0.1') {
+        header("HTTP/1.1 301 Moved Permanently");
+        header("Location: https://{$canonicalHost}{$uri}");
+        exit;
+    }
+}
+
 // LiteSpeed Server-Side RAM Cache (Instant sub-50ms TTFB)
 if (!isset($_COOKIE['admin_session']) && !isset($_GET['preview'])) {
     header('X-LiteSpeed-Cache-Control: public, max-age=604800');
@@ -35,7 +48,7 @@ $projects = $portfolio['projects'];
   <meta property="og:title" content="<?php echo htmlspecialchars($hero['name'] ?? 'Sahashra Janith'); ?> | Full-Stack & 3D Web Developer" />
   <meta property="og:description" content="<?php echo htmlspecialchars($hero['subtitle'] ?? 'Full-Stack Web Developer & Software Engineer.'); ?>" />
   <meta property="og:image" content="assets/images/sahashra_portrait.jpg" />
-  <meta property="og:url" content="https://sahashrajanith.site" />
+  <meta property="og:url" content="https://sahashrajanith.site/" />
   <meta property="og:type" content="website" />
 
   <!-- Search Engine Optimization (SEO) & Verification -->
