@@ -102,4 +102,10 @@ Options -Indexes
   Header set Referrer-Policy "strict-origin-when-cross-origin"
   Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
   Header set X-XSS-Protection "1; mode=block"
+
+  # Prevent PDF files from appearing directly in Google Search results
+  # (Ensures all search traffic lands on the main interactive portfolio website)
+  <FilesMatch "\.pdf$">
+    Header set X-Robots-Tag "noindex, noarchive"
+  </FilesMatch>
 </IfModule>
