@@ -12,6 +12,12 @@ if (stripos($requestHost, 'www.') === 0 || (!$isHttps && $requestHost !== 'local
     }
 }
 
+// Instant LiteSpeed Cache Purge trigger (visit ?purge=1 to clear entire server RAM cache)
+if (isset($_GET['purge']) || isset($_GET['nocache'])) {
+    header('X-LiteSpeed-Purge: *');
+    header('Cache-Control: no-cache, no-store, must-revalidate');
+}
+
 // LiteSpeed Server-Side RAM Cache (Instant sub-50ms TTFB)
 if (!isset($_COOKIE['admin_session']) && !isset($_GET['preview'])) {
     header('X-LiteSpeed-Cache-Control: public, max-age=604800');
@@ -354,7 +360,10 @@ $projects = $portfolio['projects'];
         <div class="feature-grid" style="margin-top:60px;">
           <div class="tilt-card reveal-on-scroll">
             <div class="card-icon-wrapper" style="background: rgba(0, 242, 254, 0.12); border-color: rgba(0, 242, 254, 0.4); box-shadow: 0 0 20px rgba(0, 242, 254, 0.25);">
-              <i class="fa-solid fa-award" style="font-size:1.6rem; color:var(--accent-cyan);"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-cyan); filter:drop-shadow(0 0 8px rgba(0,242,254,0.6));">
+                <circle cx="12" cy="8" r="6"></circle>
+                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+              </svg>
             </div>
             <h3>NVQ Level 4 Completed</h3>
             <p>Certified in Software Development with hands-on expertise in software engineering principles, database structures, and object-oriented programming.</p>
@@ -362,7 +371,10 @@ $projects = $portfolio['projects'];
 
           <div class="tilt-card reveal-on-scroll">
             <div class="card-icon-wrapper" style="background: rgba(56, 189, 248, 0.12); border-color: rgba(56, 189, 248, 0.4); box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);">
-              <i class="fa-solid fa-graduation-cap" style="font-size:1.6rem; color:#38bdf8;"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#38bdf8; filter:drop-shadow(0 0 8px rgba(56,189,248,0.6));">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
             </div>
             <h3>Diploma in ICT (NVTI)</h3>
             <p>Graduated with a Diploma in Information & Communication Technology from National Vocational Training Institute (NVTI).</p>
@@ -370,7 +382,11 @@ $projects = $portfolio['projects'];
 
           <div class="tilt-card reveal-on-scroll">
             <div class="card-icon-wrapper" style="background: rgba(168, 85, 247, 0.12); border-color: rgba(168, 85, 247, 0.4); box-shadow: 0 0 20px rgba(168, 85, 247, 0.25);">
-              <i class="fa-solid fa-layer-group" style="font-size:1.5rem; color:#a855f7;"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#a855f7; filter:drop-shadow(0 0 8px rgba(168,85,247,0.6));">
+                <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path>
+                <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path>
+                <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path>
+              </svg>
             </div>
             <h3>15+ Live Web Systems</h3>
             <p>Engineered LMS portals, online exam platforms, e-commerce stores, and tuition management systems hosted live in production.</p>
@@ -378,7 +394,10 @@ $projects = $portfolio['projects'];
 
           <div class="tilt-card reveal-on-scroll">
             <div class="card-icon-wrapper" style="background: rgba(52, 211, 153, 0.12); border-color: rgba(52, 211, 153, 0.4); box-shadow: 0 0 20px rgba(52, 211, 153, 0.25);">
-              <i class="fa-solid fa-mobile-screen-button" style="font-size:1.6rem; color:#34d399;"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#34d399; filter:drop-shadow(0 0 8px rgba(52,211,153,0.6));">
+                <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+                <path d="M12 18h.01"></path>
+              </svg>
             </div>
             <h3>Mobile & Fullstack Stack</h3>
             <p>Proficient across PHP, MySQL, Java, Android App development, JavaScript (ES6+), HTML5, CSS3, and 3D WebGL graphics.</p>
