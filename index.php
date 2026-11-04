@@ -159,8 +159,13 @@ $projects = $portfolio['projects'];
   }
   </script>
 
-  <!-- SVG Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2300f2fe'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' font-weight='900' fill='%2305070a'>SJ</text></svg>" />
+  <!-- Official Favicons for Google Search Results & Web Browsers -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
 
   <!-- Preconnect to Font & CDN Servers -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
