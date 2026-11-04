@@ -99,8 +99,8 @@ $projects = $portfolio['projects'];
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
 
   <!-- Main Stylesheet -->
-  <link rel="preload" as="style" href="styles.min.css?v=3.2" />
-  <link rel="stylesheet" href="styles.min.css?v=3.2" />
+  <link rel="preload" as="style" href="styles.min.css?v=3.3" />
+  <link rel="stylesheet" href="styles.min.css?v=3.3" />
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin />
 </head>
@@ -151,7 +151,7 @@ $projects = $portfolio['projects'];
         </div>
 
         <button id="mobile-menu-toggle" class="icon-btn mobile-toggle-btn" title="Toggle Mobile Navigation">
-          <i data-lucide="menu"></i>
+          <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </div>
@@ -165,17 +165,17 @@ $projects = $portfolio['projects'];
         <span class="logo-text-full">SAHASHRA<span style="color:var(--accent-cyan)">.JANITH</span></span>
       </div>
       <button id="mobile-menu-close" class="icon-btn">
-        <i data-lucide="x"></i>
+        <i class="fa-solid fa-xmark"></i>
       </button>
     </div>
 
     <ul class="mobile-nav-links">
-      <li><a href="#hero" class="mobile-nav-link active"><i data-lucide="home"></i> Home</a></li>
-      <li><a href="#about" class="mobile-nav-link"><i data-lucide="user"></i> About Me</a></li>
-      <li><a href="#skills" class="mobile-nav-link"><i data-lucide="code-2"></i> Tech Skills</a></li>
-      <li><a href="#projects" class="mobile-nav-link"><i data-lucide="folder-git-2"></i> Live Projects</a></li>
-      <li><a href="#terminal" class="mobile-nav-link"><i data-lucide="terminal"></i> Developer Terminal</a></li>
-      <li><a href="#contact" class="mobile-nav-link"><i data-lucide="mail"></i> Contact Me</a></li>
+      <li><a href="#hero" class="mobile-nav-link active"><i class="fa-solid fa-house" style="width:20px;"></i> Home</a></li>
+      <li><a href="#about" class="mobile-nav-link"><i class="fa-solid fa-user" style="width:20px;"></i> About Me</a></li>
+      <li><a href="#skills" class="mobile-nav-link"><i class="fa-solid fa-code" style="width:20px;"></i> Tech Skills</a></li>
+      <li><a href="#projects" class="mobile-nav-link"><i class="fa-solid fa-laptop-code" style="width:20px;"></i> Live Projects</a></li>
+      <li><a href="#terminal" class="mobile-nav-link"><i class="fa-solid fa-terminal" style="width:20px;"></i> Developer Terminal</a></li>
+      <li><a href="#contact" class="mobile-nav-link"><i class="fa-solid fa-envelope" style="width:20px;"></i> Contact Me</a></li>
     </ul>
 
     <div style="margin-top:auto; padding-top:20px; border-top:1px solid var(--border-glass);">
@@ -208,11 +208,11 @@ $projects = $portfolio['projects'];
             <div class="hero-cta-group">
               <a href="#projects" class="btn-primary">
                 <span>View Live Projects</span>
-                <i data-lucide="arrow-down-right"></i>
+                <i class="fa-solid fa-arrow-down" style="font-size:0.85rem;"></i>
               </a>
 
               <a href="#contact" class="btn-secondary">
-                <i data-lucide="mail"></i>
+                <i class="fa-solid fa-envelope" style="font-size:0.9rem;"></i>
                 <span>Hire Me</span>
               </a>
             </div>
@@ -353,36 +353,38 @@ $projects = $portfolio['projects'];
 
         <div class="feature-grid" style="margin-top:60px;">
           <div class="tilt-card reveal-on-scroll">
-            <div class="card-icon-wrapper">
-              <i data-lucide="award"></i>
+            <div class="card-icon-wrapper" style="background: rgba(0, 242, 254, 0.12); border-color: rgba(0, 242, 254, 0.4); box-shadow: 0 0 20px rgba(0, 242, 254, 0.25);">
+              <i class="fa-solid fa-award" style="font-size:1.6rem; color:var(--accent-cyan);"></i>
             </div>
             <h3>NVQ Level 4 Completed</h3>
             <p>Certified in Software Development with hands-on expertise in software engineering principles, database structures, and object-oriented programming.</p>
           </div>
 
           <div class="tilt-card reveal-on-scroll">
-            <div class="card-icon-wrapper">
-              <i data-lucide="graduation-cap"></i>
+            <div class="card-icon-wrapper" style="background: rgba(56, 189, 248, 0.12); border-color: rgba(56, 189, 248, 0.4); box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);">
+              <i class="fa-solid fa-graduation-cap" style="font-size:1.6rem; color:#38bdf8;"></i>
             </div>
             <h3>Diploma in ICT (NVTI)</h3>
             <p>Graduated with a Diploma in Information & Communication Technology from National Vocational Training Institute (NVTI).</p>
           </div>
 
           <div class="tilt-card reveal-on-scroll">
-            <div class="card-icon-wrapper">
-              <i data-lucide="layers"></i>
+            <div class="card-icon-wrapper" style="background: rgba(168, 85, 247, 0.12); border-color: rgba(168, 85, 247, 0.4); box-shadow: 0 0 20px rgba(168, 85, 247, 0.25);">
+              <i class="fa-solid fa-layer-group" style="font-size:1.5rem; color:#a855f7;"></i>
             </div>
             <h3>15+ Live Web Systems</h3>
             <p>Engineered LMS portals, online exam platforms, e-commerce stores, and tuition management systems hosted live in production.</p>
           </div>
 
           <div class="tilt-card reveal-on-scroll">
-            <div class="card-icon-wrapper">
-              <i data-lucide="smartphone"></i>
+            <div class="card-icon-wrapper" style="background: rgba(52, 211, 153, 0.12); border-color: rgba(52, 211, 153, 0.4); box-shadow: 0 0 20px rgba(52, 211, 153, 0.25);">
+              <i class="fa-solid fa-mobile-screen-button" style="font-size:1.6rem; color:#34d399;"></i>
             </div>
             <h3>Mobile & Fullstack Stack</h3>
             <p>Proficient across PHP, MySQL, Java, Android App development, JavaScript (ES6+), HTML5, CSS3, and 3D WebGL graphics.</p>
           </div>
+        </div>
+      </div>
     </section>
 
     <!-- Work Experience & Career History Timeline -->

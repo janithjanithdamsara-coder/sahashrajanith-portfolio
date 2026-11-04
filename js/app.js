@@ -3,6 +3,9 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  if (window.lucide && typeof window.lucide.createIcons === 'function') {
+    try { window.lucide.createIcons(); } catch(e) {}
+  }
   initCustomCursor();
   initScrollReveal();
   initStickyHeader();
