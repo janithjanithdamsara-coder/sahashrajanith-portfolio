@@ -40,39 +40,122 @@ $projects = $portfolio['projects'];
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><?php echo htmlspecialchars($hero['name'] ?? 'Sahashra Janith'); ?> | <?php echo htmlspecialchars($hero['title'] ?? 'Full-Stack & 3D Web Developer'); ?></title>
-  <meta name="description" content="Portfolio of Sahashra Janith - Full-Stack Web Developer & Software Engineer (NVQ Level 4 & Diploma in ICT). Specializing in PHP, MySQL, Java, Android, 3D WebGL, and high-performance web systems." />
+  <title>Sahashra Janith Damsara | Full-Stack Software Engineer &amp; Web Developer</title>
+  <meta name="description" content="Official portfolio of Sahashra Janith Damsara (Janith Damsara) — Full-Stack Software Engineer &amp; Web Developer based in Galle, Sri Lanka. Specializing in PHP, MySQL, Java, Android Apps, and Enterprise Web Systems." />
   
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="<?php echo htmlspecialchars($hero['name'] ?? 'Sahashra Janith'); ?> | Full-Stack & 3D Web Developer" />
-  <meta property="og:description" content="<?php echo htmlspecialchars($hero['subtitle'] ?? 'Full-Stack Web Developer & Software Engineer.'); ?>" />
-  <meta property="og:image" content="assets/images/sahashra_portrait.jpg" />
+  <meta property="og:site_name" content="Sahashra Janith Damsara Portfolio" />
+  <meta property="og:title" content="Sahashra Janith Damsara | Full-Stack Software Engineer &amp; Web Developer" />
+  <meta property="og:description" content="Official portfolio of Sahashra Janith Damsara (Janith Damsara) — Full-Stack Software Engineer &amp; Web Developer in Sri Lanka. Explore live enterprise systems, LMS portals, and Android apps." />
+  <meta property="og:image" content="https://sahashrajanith.site/assets/images/sahashra_portrait.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Sahashra Janith Damsara - Software Engineer" />
   <meta property="og:url" content="https://sahashrajanith.site/" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="profile" />
+  <meta property="profile:first_name" content="Sahashra Janith" />
+  <meta property="profile:last_name" content="Damsara" />
+  <meta property="profile:username" content="sahashrajanith" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sahashra Janith Damsara | Full-Stack Software Engineer" />
+  <meta name="twitter:description" content="Discover full-stack web platforms, LMS portals, Android applications, and enterprise systems built by Sahashra Janith Damsara (Janith Damsara)." />
+  <meta name="twitter:image" content="https://sahashrajanith.site/assets/images/sahashra_portrait.jpg" />
 
   <!-- Search Engine Optimization (SEO) & Verification -->
   <meta name="google-site-verification" content="foj3BRnJ9HxGMsXSbAKuZ3CNFHmKP5Di-CvJr-Ioxb4" />
   <link rel="canonical" href="https://sahashrajanith.site/" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="author" content="Sahashra Janith" />
-  <meta name="keywords" content="Sahashra, Sahashra Janith, Sahashra Janith Damsara, Sahashra Web Developer, Sahashra Software Engineer, Sahashra Sri Lanka, Full-Stack Developer Galle, Sahashra Portfolio" />
+  <meta name="author" content="Sahashra Janith Damsara (Janith)" />
+  <meta name="keywords" content="Janith, Sahashra, Sahashra Janith, Janith Damsara, Sahashra Janith Damsara, J.A. Sahashra Janith, Janith Galle, Janith Developer Sri Lanka, Sahashra Software Engineer, Full-Stack Developer Sri Lanka, Janith Portfolio, Web Developer Sri Lanka, Software Engineer Galle" />
 
   <!-- Google Knowledge Graph Schema (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Sahashra Janith",
-    "alternateName": ["Sahashra", "Sahashra Janith Damsara"],
-    "jobTitle": "Full-Stack Web Developer & Software Engineer",
-    "url": "https://sahashrajanith.site",
-    "image": "https://sahashrajanith.site/assets/images/sahashra_portrait.jpg",
-    "sameAs": [
-      "https://github.com/sahashrajanith",
-      "https://www.linkedin.com/in/sahashra-janith-6422353a1"
-    ],
-    "knowsAbout": ["Full-Stack Web Development", "PHP", "MySQL", "JavaScript", "Android Studio", "LMS Development", "REST APIs"],
-    "description": "Sahashra Janith is a Full-Stack Web Developer & Software Engineer from Sri Lanka specializing in high-performance LMS portals, exam platforms, and web systems."
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://sahashrajanith.site/#person",
+        "name": "Sahashra Janith Damsara",
+        "givenName": "Sahashra Janith",
+        "familyName": "Damsara",
+        "additionalName": "Janith",
+        "alternateName": [
+          "Janith",
+          "Sahashra",
+          "Sahashra Janith",
+          "Janith Damsara",
+          "J.A. Sahashra Janith Damsara",
+          "Janith Developer",
+          "Sahashra Janith Developer Sri Lanka"
+        ],
+        "jobTitle": "Full-Stack Software Engineer & Web Developer",
+        "url": "https://sahashrajanith.site/",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://sahashrajanith.site/assets/images/sahashra_portrait.jpg",
+          "caption": "Sahashra Janith Damsara"
+        },
+        "sameAs": [
+          "https://github.com/sahashrajanith",
+          "https://github.com/janithjanithdamsara-coder",
+          "https://www.linkedin.com/in/sahashra-janith-6422353a1"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Galle",
+          "addressRegion": "Southern Province",
+          "addressCountry": "Sri Lanka"
+        },
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "name": "National Vocational Training Institute (NVTI)"
+          }
+        ],
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "NVQ Level 4 in Software Development",
+            "credentialCategory": "degree"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Diploma in Information & Communication Technology",
+            "recognizedBy": {
+              "@type": "EducationalOrganization",
+              "name": "NVTI"
+            }
+          }
+        ],
+        "knowsAbout": [
+          "Full-Stack Web Development",
+          "Software Engineering",
+          "PHP",
+          "MySQL",
+          "Java",
+          "Android Studio App Development",
+          "JavaScript (ES6+)",
+          "Three.js & WebGL",
+          "Learning Management Systems (LMS)",
+          "E-Commerce Architecture",
+          "REST APIs"
+        ],
+        "description": "Sahashra Janith Damsara (Janith Damsara) is a Full-Stack Software Engineer & Web Developer based in Galle, Sri Lanka. Expert in PHP, MySQL, Java, Android Apps, and production web systems."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://sahashrajanith.site/#website",
+        "url": "https://sahashrajanith.site/",
+        "name": "Sahashra Janith Damsara Portfolio",
+        "publisher": {
+          "@id": "https://sahashrajanith.site/#person"
+        },
+        "inLanguage": "en-US"
+      }
+    ]
   }
   </script>
 
@@ -239,7 +322,7 @@ $projects = $portfolio['projects'];
               <picture>
                 <source media="(max-width: 768px)" srcset="assets/images/sahashra_portrait_color_mobile.webp" width="340" height="435" type="image/webp">
                 <source srcset="assets/images/sahashra_portrait_color.webp" type="image/webp">
-                <img src="assets/images/sahashra_portrait_color.png" alt="Sahashra Janith Software Developer" class="direct-portrait-img" width="644" height="824" fetchpriority="high" decoding="async" />
+                <img src="assets/images/sahashra_portrait_color.png" alt="Sahashra Janith Damsara - Full-Stack Software Engineer" class="direct-portrait-img" width="644" height="824" fetchpriority="high" decoding="async" />
               </picture>
             </div>
           </div>
@@ -306,7 +389,7 @@ $projects = $portfolio['projects'];
             <div class="about-info-grid">
               <div class="info-pill">
                 <span class="info-label">Name:</span>
-                <span class="info-val"><?php echo htmlspecialchars($hero['name'] ?? 'Sahashra Janith'); ?></span>
+                <span class="info-val">Sahashra Janith Damsara</span>
               </div>
               <div class="info-pill">
                 <span class="info-label">Education:</span>
