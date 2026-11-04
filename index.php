@@ -12,16 +12,9 @@ if (stripos($requestHost, 'www.') === 0 || (!$isHttps && $requestHost !== 'local
     }
 }
 
-// Instant LiteSpeed Cache Purge trigger (visit ?purge=1 to clear entire server RAM cache)
-if (isset($_GET['purge']) || isset($_GET['nocache'])) {
-    header('X-LiteSpeed-Purge: *');
-    header('Cache-Control: no-cache, no-store, must-revalidate');
-}
-
-// LiteSpeed Server-Side RAM Cache (Instant sub-50ms TTFB)
-if (!isset($_COOKIE['admin_session']) && !isset($_GET['preview'])) {
-    header('X-LiteSpeed-Cache-Control: public, max-age=604800');
-}
+// Always ensure fresh content & purge old server RAM cache
+header('X-LiteSpeed-Purge: *');
+header('Cache-Control: no-cache, no-store, must-revalidate');
 $dataFile = __DIR__ . '/data/portfolio.json';
 $portfolio = [
     'hero' => [],

@@ -3,6 +3,7 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  fixMissingFeatureIcons();
   if (window.lucide && typeof window.lucide.createIcons === 'function') {
     try { window.lucide.createIcons(); } catch(e) {}
   }
@@ -287,6 +288,27 @@ function initGlobalShortcuts() {
         setTimeout(() => termInput.focus(), 500);
         showToast('Terminal focused! (Ctrl + K)', 'success');
       }
+    }
+  });
+}
+
+/* --- Guaranteed Feature Cards Icon Resolver (Bypasses any Cache Delays) --- */
+function fixMissingFeatureIcons() {
+  const svgs = {
+    'award': '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#00f2fe; filter:drop-shadow(0 0 8px rgba(0,242,254,0.6));"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>',
+    'graduation-cap': '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#38bdf8; filter:drop-shadow(0 0 8px rgba(56,189,248,0.6));"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>',
+    'layers': '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#a855f7; filter:drop-shadow(0 0 8px rgba(168,85,247,0.6));"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path></svg>',
+    'smartphone': '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#34d399; filter:drop-shadow(0 0 8px rgba(52,211,153,0.6));"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>'
+  };
+
+  document.querySelectorAll('.card-icon-wrapper').forEach(wrapper => {
+    const card = wrapper.closest('.tilt-card') || wrapper.parentElement;
+    const text = card ? card.textContent : '';
+    if (!wrapper.querySelector('svg') || wrapper.querySelector('i[data-lucide]')) {
+      if (text.includes('NVQ')) wrapper.innerHTML = svgs['award'];
+      else if (text.includes('Diploma') || text.includes('NVTI')) wrapper.innerHTML = svgs['graduation-cap'];
+      else if (text.includes('Live Web') || text.includes('15+')) wrapper.innerHTML = svgs['layers'];
+      else if (text.includes('Mobile') || text.includes('Fullstack')) wrapper.innerHTML = svgs['smartphone'];
     }
   });
 }

@@ -52,10 +52,10 @@ Options -Indexes
   </IfModule>
 </Files>
 
-# Enable LiteSpeed Server-Side Page Cache
+# Disable LiteSpeed Server Cache to ensure fresh dynamic updates
 <IfModule LiteSpeed>
-  CacheLookup public on
-  CacheEngine on
+  CacheLookup off
+  CacheEngine off
 </IfModule>
 
 # ==============================================================================
