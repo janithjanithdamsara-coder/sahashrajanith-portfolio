@@ -2,94 +2,118 @@
    TECH STACK CONSTELLATION & MATRIX (SAHASHRA JANITH SKILLS)
    ========================================================================== */
 
-const skillMeta = {
+const skillDetails = {
   'PHP & Server Architecture': {
-    icon: 'fa-brands fa-php',
-    color: '#787cb5',
+    title: 'PHP & Backend',
+    role: 'Server APIs, MVC & Security',
+    badge: 'Expert',
+    gradient: 'linear-gradient(135deg, #787cb5 0%, #4f5b93 100%)',
     glow: 'rgba(120, 124, 181, 0.45)',
-    tag: 'OOP, REST APIs & Backend Architecture'
+    icon: 'fa-brands fa-php'
   },
   'MySQL & Database Design': {
-    icon: 'fa-solid fa-database',
-    color: '#00758f',
-    glow: 'rgba(0, 117, 143, 0.45)',
-    tag: 'Relational Schemas, Indexing & ACID'
+    title: 'MySQL Database',
+    role: 'Schemas, Indexing & Queries',
+    badge: 'Advanced',
+    gradient: 'linear-gradient(135deg, #00758f 0%, #00a4bd 100%)',
+    glow: 'rgba(0, 164, 189, 0.45)',
+    icon: 'fa-solid fa-database'
   },
   'Java (Desktop & Android)': {
-    icon: 'fa-brands fa-java',
-    color: '#f89820',
+    title: 'Java Systems',
+    role: 'Desktop & Core OOP Software',
+    badge: 'Advanced',
+    gradient: 'linear-gradient(135deg, #f89820 0%, #e76f00 100%)',
     glow: 'rgba(248, 152, 32, 0.45)',
-    tag: 'Object-Oriented Desktop & Android SDK'
+    icon: 'fa-brands fa-java'
   },
   'JavaScript (ES6+)': {
-    icon: 'fa-brands fa-js',
-    color: '#f7df1e',
+    title: 'JavaScript (ES6+)',
+    role: 'Modern Async, DOM & Logic',
+    badge: 'Expert',
+    gradient: 'linear-gradient(135deg, #f7df1e 0%, #e5a900 100%)',
     glow: 'rgba(247, 223, 30, 0.45)',
-    tag: 'Modern ES6+, Async/Await & DOM Engines'
+    icon: 'fa-brands fa-js'
   },
   'HTML5 & Responsive CSS3': {
-    icon: 'fa-brands fa-html5',
-    color: '#e34f26',
+    title: 'HTML5 & CSS3',
+    role: 'Responsive Flexbox & Grid',
+    badge: 'Master',
+    gradient: 'linear-gradient(135deg, #e34f26 0%, #f06529 100%)',
     glow: 'rgba(227, 79, 38, 0.45)',
-    tag: 'Semantic, Mobile-First & Animations'
+    icon: 'fa-brands fa-html5'
   },
   'Glassmorphic UI Design': {
-    icon: 'fa-solid fa-wand-magic-sparkles',
-    color: '#00f2fe',
+    title: 'Glassmorphic UI',
+    role: 'Cyberpunk & Modern Micro-UX',
+    badge: 'Creative',
+    gradient: 'linear-gradient(135deg, #00f2fe 0%, #4facfe 100%)',
     glow: 'rgba(0, 242, 254, 0.45)',
-    tag: 'Cyberpunk Glass & Micro-Interactions'
+    icon: 'fa-solid fa-wand-magic-sparkles'
   },
   'Three.js & 3D WebGL': {
-    icon: 'fa-solid fa-cubes',
-    color: '#a855f7',
+    title: 'Three.js & 3D',
+    role: 'Canvas WebGL & 3D Worlds',
+    badge: 'Advanced',
+    gradient: 'linear-gradient(135deg, #a855f7 0%, #6366f1 100%)',
     glow: 'rgba(168, 85, 247, 0.45)',
-    tag: 'Interactive 3D Canvas & Shaders'
+    icon: 'fa-solid fa-cubes'
   },
   'Android App Development': {
-    icon: 'fa-brands fa-android',
-    color: '#3ddc84',
+    title: 'Android Native',
+    role: 'Java SDK & Mobile Apps',
+    badge: 'Advanced',
+    gradient: 'linear-gradient(135deg, #3ddc84 0%, #10b981 100%)',
     glow: 'rgba(61, 220, 132, 0.45)',
-    tag: 'Native Java, XML Layouts & REST Sync'
+    icon: 'fa-brands fa-android'
   },
   'Fullstack E-Commerce Engine': {
-    icon: 'fa-solid fa-cart-shopping',
-    color: '#38bdf8',
+    title: 'E-Commerce Engines',
+    role: 'Cart, Checkout & Inventory',
+    badge: 'Fullstack',
+    gradient: 'linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%)',
     glow: 'rgba(56, 189, 248, 0.45)',
-    tag: 'Cart Architecture, Checkout & Inventory'
+    icon: 'fa-solid fa-cart-shopping'
   },
   'Git & GitHub Repositories': {
-    icon: 'fa-brands fa-github',
-    color: '#f05032',
+    title: 'Git & GitHub',
+    role: 'Version Control & Workflows',
+    badge: 'Expert',
+    gradient: 'linear-gradient(135deg, #f05032 0%, #c7381d 100%)',
     glow: 'rgba(240, 80, 50, 0.45)',
-    tag: 'Branching, Pull Requests & CI/CD'
+    icon: 'fa-brands fa-github'
   },
   'NVQ 4 & ICT Diploma Stack': {
-    icon: 'fa-solid fa-award',
-    color: '#fbbf24',
+    title: 'NVQ 4 & ICT Diploma',
+    role: 'National Certified Standard',
+    badge: 'Certified',
+    gradient: 'linear-gradient(135deg, #fbbf24 0%, #d97706 100%)',
     glow: 'rgba(251, 191, 36, 0.45)',
-    tag: 'Accredited National Qualifications'
+    icon: 'fa-solid fa-award'
   }
 };
 
-const defaultSkillMeta = {
-  icon: 'fa-solid fa-code',
-  color: '#00f2fe',
-  glow: 'rgba(0, 242, 254, 0.35)',
-  tag: 'Fullstack Core'
+const defaultSkill = {
+  title: 'Fullstack Core',
+  role: 'Software Development',
+  badge: 'Specialist',
+  gradient: 'linear-gradient(135deg, #00f2fe 0%, #4facfe 100%)',
+  glow: 'rgba(0, 242, 254, 0.45)',
+  icon: 'fa-solid fa-code'
 };
 
 const skillsData = [
-  { name: 'PHP & Server Architecture', level: 95, category: 'backend', badge: 'Expert' },
-  { name: 'MySQL & Database Design', level: 92, category: 'backend', badge: 'Advanced' },
-  { name: 'Java (Desktop & Android)', level: 90, category: 'backend', badge: 'Advanced' },
-  { name: 'JavaScript (ES6+)', level: 94, category: 'frontend', badge: 'Expert' },
-  { name: 'HTML5 & Responsive CSS3', level: 98, category: 'frontend', badge: 'Master' },
-  { name: 'Glassmorphic UI Design', level: 95, category: 'frontend', badge: 'Expert' },
-  { name: 'Three.js & 3D WebGL', level: 88, category: '3d', badge: 'Advanced' },
-  { name: 'Android App Development', level: 86, category: 'tools', badge: 'Advanced' },
-  { name: 'Fullstack E-Commerce Engine', level: 92, category: 'backend', badge: 'Expert' },
-  { name: 'Git & GitHub Repositories', level: 94, category: 'tools', badge: 'Expert' },
-  { name: 'NVQ 4 & ICT Diploma Stack', level: 96, category: 'tools', badge: 'Certified' }
+  { name: 'PHP & Server Architecture', category: 'backend' },
+  { name: 'MySQL & Database Design', category: 'backend' },
+  { name: 'Java (Desktop & Android)', category: 'backend' },
+  { name: 'JavaScript (ES6+)', category: 'frontend' },
+  { name: 'HTML5 & Responsive CSS3', category: 'frontend' },
+  { name: 'Glassmorphic UI Design', category: 'frontend' },
+  { name: 'Three.js & 3D WebGL', category: '3d' },
+  { name: 'Android App Development', category: 'tools' },
+  { name: 'Fullstack E-Commerce Engine', category: 'backend' },
+  { name: 'Git & GitHub Repositories', category: 'tools' },
+  { name: 'NVQ 4 & ICT Diploma Stack', category: 'tools' }
 ];
 
 class SkillsMatrix {
@@ -105,7 +129,6 @@ class SkillsMatrix {
     if (!this.container) return;
     this.renderFilters();
     this.renderSkills('all');
-    this.initIntersectionObserver();
   }
 
   renderFilters() {
@@ -142,43 +165,35 @@ class SkillsMatrix {
     const filtered = category === 'all' ? list : list.filter(s => s.category === category);
 
     this.container.innerHTML = filtered.map(skill => {
-      const meta = skillMeta[skill.name] || defaultSkillMeta;
+      const meta = skillDetails[skill.name] || defaultSkill;
       return `
-        <div class="skill-card tilt-card" style="--skill-color:${meta.color}; --skill-glow:${meta.glow};">
-          <div class="skill-card-inner">
-            <div class="skill-icon-box" style="color:${meta.color}; border-color:${meta.color}40; background:${meta.color}15; box-shadow:0 0 16px ${meta.glow};">
+        <div class="tech-pill-card tilt-card" style="--card-grad:${meta.gradient}; --card-glow:${meta.glow};">
+          <div class="tech-card-glow" style="background:${meta.gradient};"></div>
+          
+          <div class="tech-card-top">
+            <div class="tech-icon-circle" style="background:${meta.gradient}; box-shadow:0 8px 20px ${meta.glow};">
               <i class="${meta.icon}"></i>
             </div>
-            <div class="skill-content-block">
-              <div class="skill-header">
-                <span class="skill-name" title="${skill.name}">${skill.name}</span>
-                <span class="skill-badge" style="color:${meta.color}; border-color:${meta.color}55; background:${meta.color}15;">${skill.badge}</span>
-              </div>
-              <div class="skill-sub-row">
-                <span class="skill-tag-hint">${meta.tag}</span>
-                <span class="skill-pct-label" style="color:${meta.color};">${skill.level}%</span>
-              </div>
-            </div>
+            <span class="tech-badge" style="border-color:${meta.glow}; color:#ffffff; background:rgba(255,255,255,0.06);">
+              ${skill.badge || meta.badge}
+            </span>
           </div>
-          <div class="skill-bar-bg">
-            <div class="skill-bar-fill" data-level="${skill.level}" style="background:linear-gradient(90deg, ${meta.color}, var(--accent-cyan)); box-shadow:0 0 10px ${meta.glow};"></div>
+
+          <div class="tech-card-info">
+            <h3 class="tech-name">${meta.title}</h3>
+            <p class="tech-role">${meta.role}</p>
           </div>
+
+          <div class="tech-card-accent" style="background:${meta.gradient};"></div>
         </div>
       `;
     }).join('');
-
-    setTimeout(() => {
-      this.container.querySelectorAll('.skill-bar-fill').forEach(bar => {
-        const level = bar.getAttribute('data-level');
-        bar.style.width = `${level}%`;
-      });
-    }, 80);
 
     this.applyTiltEffect();
   }
 
   applyTiltEffect() {
-    this.container.querySelectorAll('.skill-card').forEach(card => {
+    this.container.querySelectorAll('.tech-pill-card').forEach(card => {
       card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
@@ -187,7 +202,7 @@ class SkillsMatrix {
         const centerY = rect.height / 2;
         const rotateX = ((y - centerY) / centerY) * -6;
         const rotateY = ((x - centerX) / centerX) * 6;
-        card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+        card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
       });
 
       card.addEventListener('mouseleave', () => {
@@ -198,21 +213,6 @@ class SkillsMatrix {
         if (window.soundFx) window.soundFx.playHoverSound();
       });
     });
-  }
-
-  initIntersectionObserver() {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
-            const level = bar.getAttribute('data-level');
-            bar.style.width = `${level}%`;
-          });
-        }
-      });
-    }, { threshold: 0.2 });
-
-    if (this.container) observer.observe(this.container);
   }
 }
 
